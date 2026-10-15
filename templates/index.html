@@ -13,13 +13,14 @@
   <meta property="og:url" content="https://veibae37.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script src="navigation.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="site-name" href="#about">LIU Yitao</a>
-      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#research">Projects</a><a href="#experience">Experience</a><a href="#references">References</a><a href="assets/LIU-Yitao-CV.pdf">CV</a></nav>
+      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#research">Projects</a><a href="#experience">Experience</a><a href="assets/LIU-Yitao-CV.pdf">CV</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -33,37 +34,43 @@
         <p>Outside research, I enjoy cycling, triathlon and aquathlon.</p>
         <div class="profile-links"><a href="mailto:veibaeliu@gmail.com">Email</a><a href="https://github.com/veibae37">GitHub</a><a href="assets/LIU-Yitao-CV.pdf" download>Curriculum vitae</a><a href="assets/LIU-Yitao-CV.docx" download>Word version</a></div>
       </div>
-      <figure class="profile"><img src="assets/profile-photo.jpg" width="3072" height="4080" alt="LIU Yitao cycling at Chapman's Peak" fetchpriority="high"><figcaption>cycling at chapman's peak, photo by F.</figcaption></figure>
+      <figure class="profile"><img src="assets/profile-photo.jpg" width="3072" height="4080" alt="LIU Yitao cycling at Chapman's Peak" fetchpriority="high"><figcaption><details class="photo-credit"><summary>Photo credit</summary><p>cycling at chapman's peak, photo by F.</p></details></figcaption></figure>
     </section>
     <div class="background-grid">
       <section id="education">
-        <h2>Education</h2><h3>Singapore Institute of Management<br>University of London</h3><p>Academic direction: London School of Economics and Political Science.</p><p class="meta">Singapore · Expected graduation: 2027</p><p class="meta">GPA (as reported): 63.75</p>
+        <h2>Education</h2><h3 class="institution"><img class="org-logo" src="assets/logos/sim.svg" alt="SIM logo"><span>Singapore Institute of Management</span></h3><h3 class="institution"><img class="org-logo" src="assets/logos/uol.jpg" alt="University of London logo"><span>University of London</span></h3><p>Academic direction: London School of Economics and Political Science.</p><p class="meta">Singapore · Expected graduation: 2027</p>
         <h3 class="skills-heading">Technical skills</h3><p>Python, R, SQL · Pandas, NumPy<br>QMT, API integration, backtesting, factor research<br>Git, GitHub, LaTeX</p>
       </section>
       <section id="experience">
         <h2>Experience</h2>
-        <article class="job"><h3>CICC Wealth Management Co., Ltd.</h3><p>Investment Manager Assistant</p><p class="meta">Aug–Sep 2026 · Fuzhou, China</p><p class="job-summary">Investment due diligence, embodied-intelligence research and investor education.</p></article>
-        <article class="job"><h3>China Securities Co., Ltd.</h3><p>Investment Intern</p><p class="meta">Jun–Jul 2026 · Fuzhou, China</p><p class="job-summary">Python/QMT interfaces, factor strategies and risk-document reviews.</p></article>
-        <article class="job"><h3>Shanghai Guiyuan Private Fund Management Co., Ltd.</h3><p>Quantitative Research Intern</p><p class="meta">Apr–May 2025 · Shanghai, China</p><p class="job-summary">A-share data pipelines, price-volume factors and research-report analysis.</p></article>
-        <article class="job"><h3>Shanghai Shouchang Private Fund Management Co., Ltd.</h3><p>Industry Research Intern</p><p class="meta">Jul–Aug 2024 · Shanghai, China</p><p class="job-summary">PCB value-chain research and listed-company comparisons.</p></article>
+        <article class="job"><h3 class="institution"><img class="org-logo" src="assets/logos/cicc.png" alt="CICC Wealth Management Co., Ltd. logo"><span>CICC Wealth Management Co., Ltd.</span></h3><p>Investment Manager Assistant</p><p class="meta">Aug–Sep 2026 · Fuzhou, China</p><p class="job-summary">Investment due diligence, embodied-intelligence research and investor education.</p></article>
+        <article class="job"><h3 class="institution"><img class="org-logo" src="assets/logos/csc.png" alt="China Securities Co., Ltd. logo"><span>China Securities Co., Ltd.</span></h3><p>Investment Intern</p><p class="meta">Jun–Jul 2026 · Fuzhou, China</p><p class="job-summary">Python/QMT interfaces, factor strategies and risk-document reviews.</p></article>
+        <article class="job"><h3 class="institution"><img class="org-logo" src="assets/logos/guiyuan.png" alt="Shanghai Guiyuan Private Fund Management Co., Ltd. logo"><span>Shanghai Guiyuan Private Fund Management Co., Ltd.</span></h3><p>Quantitative Research Intern</p><p class="meta">Apr–May 2025 · Shanghai, China</p><p class="job-summary">A-share data pipelines, price-volume factors and research-report analysis.</p></article>
+        <article class="job"><h3 class="institution"><span class="org-logo" aria-hidden="true"></span><span>Shanghai Shouchang Private Fund Management Co., Ltd.</span></h3><p>Industry Research Intern</p><p class="meta">Jul–Aug 2024 · Shanghai, China</p><p class="job-summary">PCB value-chain research and listed-company comparisons.</p></article>
       </section>
     </div>
     <section id="research" class="projects-section">
       <h2>Projects</h2>
       <section id="veibaequant" aria-labelledby="quant-title">
-        <div class="category-heading"><h3 id="quant-title">{{CATEGORY}}</h3><a href="{{CATEGORY_URL}}">Visit platform ↗</a></div>
-        <p class="category-description">{{DESCRIPTION}}</p>
-        <div class="project-layout">
-          <nav class="project-menu" aria-label="veibaequant.cn projects"><span class="menu-label">veibaequant.cn</span><ol>{{PROJECT_MENU}}</ol></nav>
-          <div class="project-modules">{{PROJECT_MODULES}}</div>
-        </div>
+        <details class="quant-menu">
+          <summary id="quant-title">{{CATEGORY}} <span>Projects &amp; references</span></summary>
+          <div class="quant-content">
+            <p class="category-description">{{DESCRIPTION}} <a href="{{CATEGORY_URL}}">Visit platform ↗</a></p>
+            <div class="project-modules" aria-label="Quant projects and references">
+              {{PROJECT_MODULES}}
+              <details class="project-module references" id="references" name="quant-section">
+                <summary>References</summary>
+                <div class="module-content"><ol>{{REFERENCES}}</ol></div>
+              </details>
+            </div>
+          </div>
+        </details>
       </section>
       <article class="course-project"><h3>ST1215 · Markov chain Monte Carlo</h3><p class="meta">Course project · November 2025</p><p>Implemented a random-walk Metropolis algorithm in Python and R to sample from a Laplace distribution, and assessed chain convergence using the R-hat diagnostic.</p></article>
     </section>
     <section id="beyond" class="participation">
       <h2>Activities</h2><ul><li>University of London Global Student Ambassador, 2026.</li><li>Flames of Merit Award recipient; regular volunteer with Singapore’s National Library Board.</li><li>Triathlon team member in 2025. Placed ninth in the relevant age group at the MetaSprint Series; completed T100 Singapore and SUniG Aquathlon, and trained with the SIM Aquathlon Club.</li></ul>
     </section>
-    <section id="references" class="references"><h2>References</h2><ol>{{REFERENCES}}</ol></section>
   </main>
   <footer class="container"><span>© 2026 LIU Yitao · Updated 15 October 2026</span><a href="#about">Back to top</a></footer>
 </body>

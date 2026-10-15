@@ -13,13 +13,14 @@
   <meta property="og:url" content="https://veibae37.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script src="navigation.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="site-name" href="#about">LIU Yitao</a>
-      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#research">Projects</a><a href="#experience">Experience</a><a href="#references">References</a><a href="assets/LIU-Yitao-CV.pdf">CV</a></nav>
+      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#research">Projects</a><a href="#experience">Experience</a><a href="assets/LIU-Yitao-CV.pdf">CV</a></nav>
     </div>
   </header>
   <main id="main" class="container">
@@ -33,77 +34,89 @@
         <p>Outside research, I enjoy cycling, triathlon and aquathlon.</p>
         <div class="profile-links"><a href="mailto:veibaeliu@gmail.com">Email</a><a href="https://github.com/veibae37">GitHub</a><a href="assets/LIU-Yitao-CV.pdf" download>Curriculum vitae</a><a href="assets/LIU-Yitao-CV.docx" download>Word version</a></div>
       </div>
-      <figure class="profile"><img src="assets/profile-photo.jpg" width="3072" height="4080" alt="LIU Yitao cycling at Chapman's Peak" fetchpriority="high"><figcaption>cycling at chapman's peak, photo by F.</figcaption></figure>
+      <figure class="profile"><img src="assets/profile-photo.jpg" width="3072" height="4080" alt="LIU Yitao cycling at Chapman's Peak" fetchpriority="high"><figcaption><details class="photo-credit"><summary>Photo credit</summary><p>cycling at chapman's peak, photo by F.</p></details></figcaption></figure>
     </section>
     <div class="background-grid">
       <section id="education">
-        <h2>Education</h2><h3>Singapore Institute of Management<br>University of London</h3><p>Academic direction: London School of Economics and Political Science.</p><p class="meta">Singapore · Expected graduation: 2027</p><p class="meta">GPA (as reported): 63.75</p>
+        <h2>Education</h2><h3 class="institution"><img class="org-logo" src="assets/logos/sim.svg" alt="SIM logo"><span>Singapore Institute of Management</span></h3><h3 class="institution"><img class="org-logo" src="assets/logos/uol.jpg" alt="University of London logo"><span>University of London</span></h3><p>Academic direction: London School of Economics and Political Science.</p><p class="meta">Singapore · Expected graduation: 2027</p>
         <h3 class="skills-heading">Technical skills</h3><p>Python, R, SQL · Pandas, NumPy<br>QMT, API integration, backtesting, factor research<br>Git, GitHub, LaTeX</p>
       </section>
       <section id="experience">
         <h2>Experience</h2>
-        <article class="job"><h3>CICC Wealth Management Co., Ltd.</h3><p>Investment Manager Assistant</p><p class="meta">Aug–Sep 2026 · Fuzhou, China</p><p class="job-summary">Investment due diligence, embodied-intelligence research and investor education.</p></article>
-        <article class="job"><h3>China Securities Co., Ltd.</h3><p>Investment Intern</p><p class="meta">Jun–Jul 2026 · Fuzhou, China</p><p class="job-summary">Python/QMT interfaces, factor strategies and risk-document reviews.</p></article>
-        <article class="job"><h3>Shanghai Guiyuan Private Fund Management Co., Ltd.</h3><p>Quantitative Research Intern</p><p class="meta">Apr–May 2025 · Shanghai, China</p><p class="job-summary">A-share data pipelines, price-volume factors and research-report analysis.</p></article>
-        <article class="job"><h3>Shanghai Shouchang Private Fund Management Co., Ltd.</h3><p>Industry Research Intern</p><p class="meta">Jul–Aug 2024 · Shanghai, China</p><p class="job-summary">PCB value-chain research and listed-company comparisons.</p></article>
+        <article class="job"><h3 class="institution"><img class="org-logo" src="assets/logos/cicc.png" alt="CICC Wealth Management Co., Ltd. logo"><span>CICC Wealth Management Co., Ltd.</span></h3><p>Investment Manager Assistant</p><p class="meta">Aug–Sep 2026 · Fuzhou, China</p><p class="job-summary">Investment due diligence, embodied-intelligence research and investor education.</p></article>
+        <article class="job"><h3 class="institution"><img class="org-logo" src="assets/logos/csc.png" alt="China Securities Co., Ltd. logo"><span>China Securities Co., Ltd.</span></h3><p>Investment Intern</p><p class="meta">Jun–Jul 2026 · Fuzhou, China</p><p class="job-summary">Python/QMT interfaces, factor strategies and risk-document reviews.</p></article>
+        <article class="job"><h3 class="institution"><img class="org-logo" src="assets/logos/guiyuan.png" alt="Shanghai Guiyuan Private Fund Management Co., Ltd. logo"><span>Shanghai Guiyuan Private Fund Management Co., Ltd.</span></h3><p>Quantitative Research Intern</p><p class="meta">Apr–May 2025 · Shanghai, China</p><p class="job-summary">A-share data pipelines, price-volume factors and research-report analysis.</p></article>
+        <article class="job"><h3 class="institution"><span class="org-logo" aria-hidden="true"></span><span>Shanghai Shouchang Private Fund Management Co., Ltd.</span></h3><p>Industry Research Intern</p><p class="meta">Jul–Aug 2024 · Shanghai, China</p><p class="job-summary">PCB value-chain research and listed-company comparisons.</p></article>
       </section>
     </div>
     <section id="research" class="projects-section">
       <h2>Projects</h2>
       <section id="veibaequant" aria-labelledby="quant-title">
-        <div class="category-heading"><h3 id="quant-title">veibaequant.cn</h3><a href="https://veibaequant.cn/">Visit platform ↗</a></div>
-        <p class="category-description">My quantitative research platform, organised around five related projects. Each module connects a research question with its data, method and evaluation.</p>
-        <div class="project-layout">
-          <nav class="project-menu" aria-label="veibaequant.cn projects"><span class="menu-label">veibaequant.cn</span><ol><li><a href="#options-arbitrage">Options arbitrage</a></li>
-<li><a href="#a-share-research">A-share selection &amp; backtesting</a></li>
-<li><a href="#hong-kong-research">Preliminary Hong Kong equity research</a></li>
-<li><a href="#sentiment-volatility">Market sentiment &amp; China volatility index</a></li>
-<li><a href="#report-to-factor">From public research reports to factors</a></li></ol></nav>
-          <div class="project-modules"><article class="project-module" id="options-arbitrage">
-  <h4>Options arbitrage</h4>
+        <details class="quant-menu">
+          <summary id="quant-title">veibaequant.cn <span>Projects &amp; references</span></summary>
+          <div class="quant-content">
+            <p class="category-description">My quantitative research platform, organised around five related projects. Each module connects a research question with its data, method and evaluation. <a href="https://veibaequant.cn/">Visit platform ↗</a></p>
+            <div class="project-modules" aria-label="Quant projects and references">
+              <details class="project-module" id="options-arbitrage" name="quant-section">
+  <summary>Options arbitrage</summary>
+  <div class="module-content">
   <p class="project-subtitle">ETF option box spreads</p>
   <p>A scanner for four-leg box spreads in mainland ETF options. It uses real bid and ask quotes from MiniQMT or public market data to examine pricing differences across option combinations.</p><p>The focus is on identifying candidate box spreads and inspecting their quoted prices. The published output is a read-only research snapshot; a quoted opportunity is not evidence of an executable profit.</p>
 
   <div class="module-links"><a href="https://veibaequant.cn/">Open platform</a></div><p class="module-note">On the platform, select “ETF 期权盒式价差扫描” (ETF option box-spread scanner).</p>
-</article>
-<article class="project-module" id="a-share-research">
-  <h4>A-share selection &amp; backtesting</h4>
+  </div>
+</details>
+<details class="project-module" id="a-share-research" name="quant-section">
+  <summary>A-share selection &amp; backtesting</summary>
+  <div class="module-content">
   <p class="project-subtitle">From stock screening to portfolio evaluation</p>
   <p>A combined project covering multi-factor A-share selection, portfolio construction and strategy backtesting. The selection module reads validated market snapshots and presents candidate stocks, factor inputs and portfolio weights.</p><p>The research workflow connects stock selection with evaluation: compare returns against a benchmark, inspect turnover and drawdowns, and account for commissions, stamp duty and slippage.</p><p>The MA × volatility console provides a configurable backtesting example with separate training and holdout periods. It is also used as a validation component in the report-to-factor project below.</p>
 
   <div class="module-links"><a href="https://veibaequant.cn/">Stock selection</a> <a href="https://veibaequant.cn/backtest">Backtesting console</a></div>
-</article>
-<article class="project-module" id="hong-kong-research">
-  <h4>Preliminary Hong Kong equity research</h4>
+  </div>
+</details>
+<details class="project-module" id="hong-kong-research" name="quant-section">
+  <summary>Preliminary Hong Kong equity research</summary>
+  <div class="module-content">
   <p class="project-subtitle">Factor definitions &amp; point-in-time data</p>
   <p>An initial framework for studying Hong Kong equities through twelve factors, including expectations, southbound flows, analyst relationships and conventional equity signals.</p><p>The main emphasis is information timing: preserve first-available disclosures, align data with backward as-of joins, and move after-close information to the next trading day. The module documents factor definitions and shows validated QMT snapshots when available.</p><p>Inputs requiring independent point-in-time analyst datasets remain unavailable when those datasets are missing. This is preliminary research, with data coverage still a central constraint.</p>
 
   <div class="module-links"><a href="https://veibaequant.cn/hk-factor-lab">Hong Kong Alpha Lab</a></div>
-</article>
-<article class="project-module" id="sentiment-volatility">
-  <h4>Market sentiment &amp; China volatility index</h4>
+  </div>
+</details>
+<details class="project-module" id="sentiment-volatility" name="quant-section">
+  <summary>Market sentiment &amp; China volatility index</summary>
+  <div class="module-content">
   <p class="project-subtitle">Six sentiment dimensions and an iVX reconstruction study</p>
   <p>A daily sentiment monitor combining options activity, margin financing, implied volatility, market breadth, futures basis and equity–bond turnover. Each dimension contributes a directional signal, with the actual observation date retained when data arrive late.</p><p>The volatility research focuses on reconstructing the China volatility index from 50ETF option data. The original SSE definition measures expected volatility over the next 30 days, using near- and next-term option contracts under a variance-swap approach.</p><p>The official methodology is the reference for the reconstruction. Research calculations and data proxies must be distinguished from the official published index.</p>
   <p class="citations">References: <a href="#ref-ivx">[2]</a> <a href="#ref-ivx-method">[3]</a></p>
   <div class="module-links"><a href="https://veibaequant.cn/market-sentiment">Sentiment monitor</a></div>
-</article>
-<article class="project-module" id="report-to-factor">
-  <h4>From public research reports to factors</h4>
+  </div>
+</details>
+<details class="project-module" id="report-to-factor" name="quant-section">
+  <summary>From public research reports to factors</summary>
+  <div class="module-content">
   <p class="project-subtitle">Evidence, hypotheses, factor code &amp; out-of-sample testing</p>
   <p>A report-grounded research workflow inspired by XAlpha. Public research reports provide evidence for hypotheses; RMA organises that evidence, Macro Brain plans research directions, and Micro Brain translates hypotheses into executable factor candidates.</p><p>Evaluation belongs to the same project: inspect Rank IC, turnover, net returns and drawdowns, then feed the findings back into the next research cycle. XAlpha’s Table 4 provides a reference for using successful and unsuccessful research memories to guide that process.</p><p>The platform includes multi-index factor results and an out-of-sample MA × volatility console. Automatic parameter selection uses training data only, signals execute no earlier than the next trading day, and trading costs are included. Repeated manual tuning against test results is treated as exploratory.</p>
   <p class="citations">References: <a href="#ref-xalpha">[1]</a></p>
   <div class="module-links"><a href="https://veibaequant.cn/#research-engine">Research workflow</a> <a href="https://veibaequant.cn/#positive-factors">Factor results</a> <a href="https://veibaequant.cn/backtest">Out-of-sample testing</a></div>
-</article></div>
-        </div>
+  </div>
+</details>
+              <details class="project-module references" id="references" name="quant-section">
+                <summary>References</summary>
+                <div class="module-content"><ol><li id="ref-xalpha"><a href="https://arxiv.org/html/2607.08332v2#S4.T4">XAlpha: A Memory-Driven AI Quant Researcher for Hypothesis-to-Code Alpha Discovery</a><p>arXiv:2607.08332v2. See Section 4.3, Table 4, for the memory-routing example. Methodological reference for the report-to-factor project.</p></li>
+<li id="ref-ivx"><a href="https://www.sse.com.cn/market/sseindex/diclosure/c/c_20161104_4198915.shtml">上证50ETF波动率指数（中国波指）即将发布</a><p>Shanghai Stock Exchange, 4 November 2016. Announcement by the SSE and China Securities Index Company; defines the index as a measure of expected 30-day 50ETF volatility.</p></li>
+<li id="ref-ivx-method"><a href="https://www.sse.com.cn/market/sseindex/diclosure/c/10078008/files/ea180245587c4665b70e7fa63db502c1.docx">上证50ETF波动率指数编制方案</a><p>Original methodology linked from the SSE announcement. Index: iVX (000188). Covers option-price selection, the seven-day roll convention, term variances and the 30-day calculation. Word document.</p></li></ol></div>
+              </details>
+            </div>
+          </div>
+        </details>
       </section>
       <article class="course-project"><h3>ST1215 · Markov chain Monte Carlo</h3><p class="meta">Course project · November 2025</p><p>Implemented a random-walk Metropolis algorithm in Python and R to sample from a Laplace distribution, and assessed chain convergence using the R-hat diagnostic.</p></article>
     </section>
     <section id="beyond" class="participation">
       <h2>Activities</h2><ul><li>University of London Global Student Ambassador, 2026.</li><li>Flames of Merit Award recipient; regular volunteer with Singapore’s National Library Board.</li><li>Triathlon team member in 2025. Placed ninth in the relevant age group at the MetaSprint Series; completed T100 Singapore and SUniG Aquathlon, and trained with the SIM Aquathlon Club.</li></ul>
     </section>
-    <section id="references" class="references"><h2>References</h2><ol><li id="ref-xalpha"><a href="https://arxiv.org/html/2607.08332v2#S4.T4">XAlpha: A Memory-Driven AI Quant Researcher for Hypothesis-to-Code Alpha Discovery</a><p>arXiv:2607.08332v2. See Section 4.3, Table 4, for the memory-routing example. Methodological reference for the report-to-factor project.</p></li>
-<li id="ref-ivx"><a href="https://www.sse.com.cn/market/sseindex/diclosure/c/c_20161104_4198915.shtml">上证50ETF波动率指数（中国波指）即将发布</a><p>Shanghai Stock Exchange, 4 November 2016. Announcement by the SSE and China Securities Index Company; defines the index as a measure of expected 30-day 50ETF volatility.</p></li>
-<li id="ref-ivx-method"><a href="https://www.sse.com.cn/market/sseindex/diclosure/c/10078008/files/ea180245587c4665b70e7fa63db502c1.docx">上证50ETF波动率指数编制方案</a><p>Original methodology linked from the SSE announcement. Index: iVX (000188). Covers option-price selection, the seven-day roll convention, term variances and the 30-day calculation. Word document.</p></li></ol></section>
   </main>
   <footer class="container"><span>© 2026 LIU Yitao · Updated 15 October 2026</span><a href="#about">Back to top</a></footer>
 </body>

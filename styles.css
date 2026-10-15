@@ -94,3 +94,35 @@ footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1
   h2, h3, h4 { break-after: avoid; }
   a { color: inherit; }
 }
+
+/* Two-level disclosure navigation. Content is closed until selected. */
+summary { cursor: pointer; }
+summary:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+.quant-menu { border-block: 1px solid var(--line); margin-bottom: 24px; }
+.quant-menu > summary { color: var(--red); font-size: 19px; font-weight: 600; padding: 17px 0; }
+.quant-menu > summary > span { color: var(--muted); font-size: 12px; font-weight: 400; margin-left: 15px; }
+.quant-content { padding: 0 0 15px 23px; }
+.quant-content .category-description { margin: 0 0 20px; }
+.quant-content .category-description > a { white-space: nowrap; }
+.project-module { padding: 0; border-top: 1px solid var(--line); }
+.project-module + .project-module { padding: 0; }
+.project-module > summary { padding: 13px 0; font-size: 14px; font-weight: 500; }
+.project-module[open] > summary { color: var(--red); }
+.module-content { padding: 0 0 23px 18px; }
+.module-content .project-subtitle { margin-top: 0; }
+.project-modules .references { margin: 0; }
+.project-modules .references ol { margin-top: 5px; }
+.photo-credit > summary { color: var(--red); text-decoration: underline; display: inline-block; font-size: 11px; }
+.photo-credit > summary::-webkit-details-marker { display: none; }
+.photo-credit p { margin-top: 6px; font-size: 11px; }
+.institution { display: flex; align-items: center; gap: 12px; }
+.institution + .institution { margin-top: 14px; }
+.org-logo { width: 66px; height: 38px; flex: 0 0 66px; object-fit: contain; }
+.job > p { margin-left: 78px; }
+@media (max-width: 600px) {
+  .quant-menu > summary > span { display: block; margin-left: 18px; }
+  .quant-content { padding-left: 12px; }
+  .module-content { padding-left: 12px; }
+  .org-logo { width: 52px; height: 32px; flex-basis: 52px; }
+  .job > p { margin-left: 64px; }
+}

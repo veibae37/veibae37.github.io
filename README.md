@@ -22,7 +22,7 @@ The generator validates IDs and reference targets and escapes content. Generated
 - CV downloads: `assets/LIU-Yitao-CV.pdf` and `assets/LIU-Yitao-CV.docx`.
 - The historical `resume of Liuyitao.pdf` URL retains the current CV.
 
-Run the generator after changing the template. Preview the repository with any static HTTP server. Desktop has a project submenu beside the research modules; mobile places the same submenu above them.
+Run the generator after changing the template. Preview the repository with any static HTTP server. Quant uses a two-level disclosure menu: open the platform category, then select a project or References. All panels start closed unless a shared fragment URL targets one. Photo credit is a click-to-reveal disclosure. Logo provenance is recorded in `assets/logos/sources.json`.
 
 ## Sources
 

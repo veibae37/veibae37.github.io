@@ -27,13 +27,15 @@ def build():
         paragraphs = ''.join(f'<p>{escape(t)}</p>' for t in [project['summary']] + project.get('details', []))
         links = ' '.join(link(l['url'], l['label']) for l in project['links'])
         note = f'<p class="module-note">{escape(project["note"])}</p>' if project.get('note') else ''
-        modules.append(f'''<article class="project-module" id="{project['id']}">
-  <h4>{escape(project['title'])}</h4>
+        modules.append(f'''<details class="project-module" id="{project['id']}" name="quant-section">
+  <summary>{escape(project['title'])}</summary>
+  <div class="module-content">
   <p class="project-subtitle">{escape(project['subtitle'])}</p>
   {paragraphs}
   {f'<p class="citations">References: {citations}</p>' if citations else ''}
   <div class="module-links">{links}</div>{note}
-</article>''')
+  </div>
+</details>''')
     for ref in data['references']:
         references.append(f'<li id="{ref["id"]}">{link(ref["url"], ref["title"])}<p>{escape(ref["description"])}</p></li>')
     values = dict(CATEGORY=escape(data['category']), CATEGORY_URL=escape(data['url'], quote=True), DESCRIPTION=escape(data['description']), PROJECT_MENU='\n'.join(menu), PROJECT_MODULES='\n'.join(modules), REFERENCES='\n'.join(references))
