@@ -1,0 +1,55 @@
+{
+  "category": "veibaequant.cn",
+  "description": "My quantitative research platform, organised around five related projects. Each module connects a research question with its data, method and evaluation.",
+  "url": "https://veibaequant.cn/",
+  "projects": [
+    {
+      "id": "options-arbitrage",
+      "title": "Options arbitrage",
+      "subtitle": "ETF option box spreads",
+      "summary": "A scanner for four-leg box spreads in mainland ETF options. It uses real bid and ask quotes from MiniQMT or public market data to examine pricing differences across option combinations.",
+      "details": ["The focus is on identifying candidate box spreads and inspecting their quoted prices. The published output is a read-only research snapshot; a quoted opportunity is not evidence of an executable profit."],
+      "links": [{"label": "Open platform", "url": "https://veibaequant.cn/"}],
+      "note": "On the platform, select “ETF 期权盒式价差扫描” (ETF option box-spread scanner)."
+    },
+    {
+      "id": "a-share-research",
+      "title": "A-share selection & backtesting",
+      "subtitle": "From stock screening to portfolio evaluation",
+      "summary": "A combined project covering multi-factor A-share selection, portfolio construction and strategy backtesting. The selection module reads validated market snapshots and presents candidate stocks, factor inputs and portfolio weights.",
+      "details": ["The research workflow connects stock selection with evaluation: compare returns against a benchmark, inspect turnover and drawdowns, and account for commissions, stamp duty and slippage.", "The MA × volatility console provides a configurable backtesting example with separate training and holdout periods. It is also used as a validation component in the report-to-factor project below."],
+      "links": [{"label": "Stock selection", "url": "https://veibaequant.cn/"}, {"label": "Backtesting console", "url": "https://veibaequant.cn/backtest"}]
+    },
+    {
+      "id": "hong-kong-research",
+      "title": "Preliminary Hong Kong equity research",
+      "subtitle": "Factor definitions & point-in-time data",
+      "summary": "An initial framework for studying Hong Kong equities through twelve factors, including expectations, southbound flows, analyst relationships and conventional equity signals.",
+      "details": ["The main emphasis is information timing: preserve first-available disclosures, align data with backward as-of joins, and move after-close information to the next trading day. The module documents factor definitions and shows validated QMT snapshots when available.", "Inputs requiring independent point-in-time analyst datasets remain unavailable when those datasets are missing. This is preliminary research, with data coverage still a central constraint."],
+      "links": [{"label": "Hong Kong Alpha Lab", "url": "https://veibaequant.cn/hk-factor-lab"}]
+    },
+    {
+      "id": "sentiment-volatility",
+      "title": "Market sentiment & China volatility index",
+      "subtitle": "Six sentiment dimensions and an iVX reconstruction study",
+      "summary": "A daily sentiment monitor combining options activity, margin financing, implied volatility, market breadth, futures basis and equity–bond turnover. Each dimension contributes a directional signal, with the actual observation date retained when data arrive late.",
+      "details": ["The volatility research focuses on reconstructing the China volatility index from 50ETF option data. The original SSE definition measures expected volatility over the next 30 days, using near- and next-term option contracts under a variance-swap approach.", "The official methodology is the reference for the reconstruction. Research calculations and data proxies must be distinguished from the official published index."],
+      "references": ["ref-ivx", "ref-ivx-method"],
+      "links": [{"label": "Sentiment monitor", "url": "https://veibaequant.cn/market-sentiment"}]
+    },
+    {
+      "id": "report-to-factor",
+      "title": "From public research reports to factors",
+      "subtitle": "Evidence, hypotheses, factor code & out-of-sample testing",
+      "summary": "A report-grounded research workflow inspired by XAlpha. Public research reports provide evidence for hypotheses; RMA organises that evidence, Macro Brain plans research directions, and Micro Brain translates hypotheses into executable factor candidates.",
+      "details": ["Evaluation belongs to the same project: inspect Rank IC, turnover, net returns and drawdowns, then feed the findings back into the next research cycle. XAlpha’s Table 4 provides a reference for using successful and unsuccessful research memories to guide that process.", "The platform includes multi-index factor results and an out-of-sample MA × volatility console. Automatic parameter selection uses training data only, signals execute no earlier than the next trading day, and trading costs are included. Repeated manual tuning against test results is treated as exploratory."],
+      "references": ["ref-xalpha"],
+      "links": [{"label": "Research workflow", "url": "https://veibaequant.cn/#research-engine"}, {"label": "Factor results", "url": "https://veibaequant.cn/#positive-factors"}, {"label": "Out-of-sample testing", "url": "https://veibaequant.cn/backtest"}]
+    }
+  ],
+  "references": [
+    {"id": "ref-xalpha", "title": "XAlpha: A Memory-Driven AI Quant Researcher for Hypothesis-to-Code Alpha Discovery", "description": "arXiv:2607.08332v2. See Section 4.3, Table 4, for the memory-routing example. Methodological reference for the report-to-factor project.", "url": "https://arxiv.org/html/2607.08332v2#S4.T4"},
+    {"id": "ref-ivx", "title": "上证50ETF波动率指数（中国波指）即将发布", "description": "Shanghai Stock Exchange, 4 November 2016. Announcement by the SSE and China Securities Index Company; defines the index as a measure of expected 30-day 50ETF volatility.", "url": "https://www.sse.com.cn/market/sseindex/diclosure/c/c_20161104_4198915.shtml"},
+    {"id": "ref-ivx-method", "title": "上证50ETF波动率指数编制方案", "description": "Original methodology linked from the SSE announcement. Index: iVX (000188). Covers option-price selection, the seven-day roll convention, term variances and the 30-day calculation. Word document.", "url": "https://www.sse.com.cn/market/sseindex/diclosure/c/10078008/files/ea180245587c4665b70e7fa63db502c1.docx"}
+  ]
+}
