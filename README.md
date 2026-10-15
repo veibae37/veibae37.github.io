@@ -2,6 +2,8 @@
 
 Live site: https://veibae37.github.io/
 
+[中文修改指南：内容、图片、样式及发布步骤](EDITING.md)
+
 A static academic-style homepage with a restrained red accent, a profile photograph, CV downloads and a modular research catalogue. GitHub Pages serves `main` at the repository root. The committed HTML works without JavaScript or a server build.
 
 ## Update projects
