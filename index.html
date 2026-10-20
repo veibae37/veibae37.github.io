@@ -3,30 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LIU Yitao | Personal Homepage</title>
+  <title>Liu Yitao(veibae) | Personal Homepage</title>
   <meta name="description" content="LIU Yitao’s personal homepage: quantitative research projects, education, experience and CV.">
   <meta name="theme-color" content="#b91c1c">
   <link rel="canonical" href="https://veibae37.github.io/">
-  <meta property="og:title" content="LIU Yitao | Personal Homepage">
+  <meta property="og:title" content="Liu Yitao(veibae) | Personal Homepage">
   <meta property="og:description" content="Quantitative research, education, experience and selected projects.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://veibae37.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="navigation.js" defer></script>
+  <script>
+    try {
+      if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark';
+    } catch (error) {}
+  </script>
+  <link rel="stylesheet" href="styles.css?v=20261020">
+  <script src="navigation.js?v=20261020" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="site-name" href="#about">LIU Yitao</a>
-      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#research">Projects</a><a href="#experience">Experience</a><a href="assets/LIU-Yitao-CV.pdf">CV</a></nav>
+      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#research">Selected Projects</a><a href="#experience">Experience</a></nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to night mode" aria-pressed="false" title="Switch to night mode">
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.2A8.7 8.7 0 0 1 10.8 3.5a8.7 8.7 0 1 0 9.7 9.7Z"/></svg>
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg>
+      </button>
     </div>
+    <div class="reading-progress" aria-hidden="true"></div>
   </header>
   <main id="main" class="container">
     <section id="about" class="about">
       <div class="bio">
-        <h1>LIU Yitao</h1>
+        <h1>Liu Yitao(veibae)</h1>
         <p class="affiliation">Singapore Institute of Management · University of London</p>
         <p>I study at the Singapore Institute of Management on the University of London programme, with academic direction from the London School of Economics and Political Science. I expect to graduate in 2027.</p>
         <p>My interests are in quantitative investment research, financial markets and data. My work includes market-data pipelines, factor research, backtesting and industry research.</p>
@@ -50,7 +59,7 @@
       </section>
     </div>
     <section id="research" class="projects-section">
-      <h2>Projects</h2>
+      <h2>Selected Projects</h2>
       <section id="veibaequant" aria-labelledby="quant-title">
         <details class="quant-menu">
           <summary id="quant-title">veibaequant.cn <span>Projects &amp; references</span></summary>
@@ -118,6 +127,6 @@
       <h2>Activities</h2><ul><li>University of London Global Student Ambassador, 2026.</li><li>Flames of Merit Award recipient; regular volunteer with Singapore’s National Library Board.</li><li>Triathlon team member in 2025. Placed ninth in the relevant age group at the MetaSprint Series; completed T100 Singapore and SUniG Aquathlon, and trained with the SIM Aquathlon Club.</li></ul>
     </section>
   </main>
-  <footer class="container"><span>© 2026 LIU Yitao · Updated 15 October 2026</span><a href="#about">Back to top</a></footer>
+  <footer class="container"><span>© 2026 Liu Yitao(veibae) · Updated 21 October 2026</span><a href="#about">Back to top</a></footer>
 </body>
 </html>
