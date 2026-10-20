@@ -1,5 +1,5 @@
-:root { color-scheme: light; --accent: #b91c1c; --text: #292725; --muted: #69645f; --line: #e4dfd9; --paper: #fffefa; --header: rgba(255, 254, 250, .86); --hover: rgba(185, 28, 28, .07); }
-:root[data-theme="dark"] { color-scheme: dark; --accent: #c194e6; --text: #eae4ef; --muted: #b3a7bc; --line: #33293c; --paper: #121014; --header: rgba(18, 16, 20, .84); --hover: rgba(193, 148, 230, .1); }
+:root { color-scheme: light; --accent: #b91c1c; --progress: #c5232c; --text: #292725; --muted: #69645f; --line: #e4dfd9; --paper: #fffefa; --header: rgba(255, 254, 250, .86); --hover: rgba(185, 28, 28, .07); }
+:root[data-theme="dark"] { color-scheme: dark; --accent: #c194e6; --progress: #c194e6; --text: #eae4ef; --muted: #b3a7bc; --line: #33293c; --paper: #121014; --header: rgba(18, 16, 20, .84); --hover: rgba(193, 148, 230, .1); }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 84px; }
 body { margin: 0; color: var(--text); background: var(--paper); font: 15px/1.7 Arial, Helvetica, sans-serif; }
@@ -14,7 +14,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .site-header nav { display: flex; align-items: center; gap: 26px; font-size: 13px; }
 .site-header nav a { color: var(--text); }
 .site-header nav a:hover { color: var(--accent); }
-.reading-progress { position: absolute; inset: auto 0 -1px; height: 2px; background: #c5232c; transform: scaleX(0); transform-origin: left; pointer-events: none; }
+.reading-progress { position: absolute; inset: auto 0 -1px; height: 2px; background: var(--progress); transform: scaleX(0); transform-origin: left; pointer-events: none; }
 .theme-toggle { display: grid; place-items: center; flex: 0 0 36px; width: 36px; height: 36px; padding: 8px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--accent); cursor: pointer; }
 .theme-toggle:hover { background: var(--hover); border-color: var(--accent); }
 .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
@@ -32,7 +32,12 @@ p + p { margin-top: 12px; }
 .profile { margin: 0; padding-top: 3px; }
 .profile img { display: block; width: 100%; height: auto; border-radius: 2px; }
 .profile figcaption { color: var(--muted); font-size: 10px; line-height: 1.6; margin-top: 8px; }
-.profile-links { display: flex; flex-wrap: wrap; gap: 9px 20px; margin-top: 22px; font-size: 13px; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.profile-link { position: relative; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 6px; }
+.profile-link svg { display: block; width: 23px; height: 23px; }
+.profile-link:hover { background: var(--hover); text-decoration: none; }
+.profile-link::after { content: attr(data-label); position: absolute; top: calc(100% + 5px); left: 50%; transform: translateX(-50%); padding: 2px 7px; color: var(--text); background: var(--paper); border: 1px solid var(--line); border-radius: 3px; font-size: 11px; line-height: 1.6; white-space: nowrap; opacity: 0; visibility: hidden; pointer-events: none; z-index: 2; }
+.profile-link:hover::after, .profile-link:focus-visible::after { opacity: 1; visibility: visible; }
 .background-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 64px; padding: 30px 0 36px; border-top: 1px solid var(--line); }
 .background-grid p { font-size: 13px; margin-top: 5px; }
 .background-grid h3 { font-size: 14px; }
@@ -129,8 +134,8 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .org-logo { width: 66px; height: 38px; flex: 0 0 66px; object-fit: contain; }
 .shouchang-logo { position: relative; overflow: hidden; height: 54px; }
 .shouchang-logo img { position: absolute; width: 400%; max-width: none; height: auto; left: -150%; top: -90%; }
-[data-theme="dark"] .org-logo { background: #fff; border-radius: 3px; padding: 3px; }
-[data-theme="dark"] .shouchang-logo { padding: 0; }
+/* Screen removes the inverted white canvas; dark lettering becomes legible on the page. */
+[data-theme="dark"] .org-logo { filter: invert(1) hue-rotate(180deg); mix-blend-mode: screen; }
 .job > p { margin-left: 78px; }
 @media (max-width: 600px) {
   .quant-menu > summary > span { display: block; margin-left: 18px; }
@@ -149,4 +154,5 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 @media print {
   :root[data-theme="dark"] { --text: #292725; --muted: #69645f; --line: #e4dfd9; --paper: #fff; }
   .site-header { display: none; }
+  [data-theme="dark"] .org-logo { filter: none; mix-blend-mode: normal; }
 }
