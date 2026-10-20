@@ -118,11 +118,14 @@ summary:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
 .institution { display: flex; align-items: center; gap: 12px; }
 .institution + .institution { margin-top: 14px; }
 .org-logo { width: 66px; height: 38px; flex: 0 0 66px; object-fit: contain; }
+.shouchang-logo { position: relative; overflow: hidden; height: 54px; }
+.shouchang-logo img { position: absolute; width: 400%; max-width: none; height: auto; left: -150%; top: -90%; }
 .job > p { margin-left: 78px; }
 @media (max-width: 600px) {
   .quant-menu > summary > span { display: block; margin-left: 18px; }
   .quant-content { padding-left: 12px; }
   .module-content { padding-left: 12px; }
   .org-logo { width: 52px; height: 32px; flex-basis: 52px; }
+  .shouchang-logo { height: 43px; }
   .job > p { margin-left: 64px; }
 }
